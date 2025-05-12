@@ -37,10 +37,10 @@ Repository: Simulado usando arrays em memória para armazenar e manipular produt
 
  bash
 #Clonar o repositório
-git clone https://github.com/adaltofadergs/2025_1_SistemasDistribuidosMobile_sexta.git
+git clone https://github.com/osmarsoto/A3_E1.git
 
-#Navegar até a pasta da aula
-cd 2025_1_SistemasDistribuidosMobile_sexta/Aula07-REST
+#Navegar até a pasta da API
+cd osmarsoto/A3_E1-REST
 
 #Instalar as dependências
 npm install
