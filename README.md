@@ -7,11 +7,14 @@ Objetivo: criar uma **API REST** simples utilizando **Node.js** e **Express**, s
 
 ## 🧠 Ficha-Resumo da Pesquisa
 Tema: Desenvolvimento de API REST
+
 API REST é uma arquitetura baseada em recursos e métodos HTTP, onde cada recurso é representado por uma URL.
 
 Utilizamos Node.js e Express.js para construir o servidor e disponibilizar endpoints.
 
-📐 Padrão de Projeto adotado: Controller-Service-Repository (adaptado)
+📐 Padrão de Projeto adotado: 
+Controller-Service-Repository (adaptado)
+
 Controller: Gerencia rotas e respostas HTTP.
 
 Service: (não implementado aqui, mas sugerido) — Concentraria as regras de negócio.
