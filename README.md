@@ -1,71 +1,57 @@
+# API REST com Node.js - Padrão Controller-Service-Repository
 
-## 📚 API REST com Node.js e Express
+## 📘 Ficha-Resumo
 
-## 📌 Descrição
-Projeto desenvolvido como exercício da disciplina **Sistemas Distribuídos Mobile**.  
-Objetivo: criar uma **API REST** simples utilizando **Node.js** e **Express**, simulando operações básicas de cadastro de produtos.
+### 🎯 Tema
+Padrões de Projeto no Desenvolvimento de APIs REST com Node.js
 
-## 🧠 Ficha-Resumo da Pesquisa
-Tema: Desenvolvimento de API REST
+### 🧩 Padrão Escolhido: Controller-Service-Repository
 
-API REST é uma arquitetura baseada em recursos e métodos HTTP, onde cada recurso é representado por uma URL.
+### 📚 O que são Padrões de Projeto?
+Padrões de projeto são soluções reutilizáveis para problemas comuns no desenvolvimento de software. No contexto de APIs, eles ajudam a manter o código mais organizado, escalável e fácil de manter.
 
-Utilizamos Node.js e Express.js para construir o servidor e disponibilizar endpoints.
+### 🧱 Sobre o Padrão Controller-Service-Repository
 
-📐 Padrão de Projeto adotado: 
-Controller-Service-Repository (adaptado)
+**Controller**: Gerencia as requisições e respostas HTTP.  
+**Service**: Contém a lógica de negócio da aplicação.  
+**Repository**: Lida com o armazenamento e recuperação de dados (mesmo que apenas em memória neste projeto).
 
-Controller: Gerencia rotas e respostas HTTP.
+### ✅ Vantagens
+- Separação de responsabilidades
+- Código limpo e organizado
+- Facilidade para testar e manter
 
-Service: (não implementado aqui, mas sugerido) — Concentraria as regras de negócio.
+### 🗂 Estrutura de Pastas
+```
+project/
+├── controllers/
+│   ├── clienteController.js
+│   └── produtoController.js
+├── services/
+│   ├── clienteService.js
+│   └── produtoService.js
+├── repositories/
+│   ├── clienteRepository.js
+│   └── produtoRepository.js
+├── routes/
+│   ├── clienteRoutes.js
+│   └── produtoRoutes.js
+├── app.js
+├── server.js
+└── README.md (este arquivo)
+```
 
-Repository: Simulado usando arrays em memória para armazenar e manipular produtos.
+### 📌 Funcionalidades Implementadas
+- GET e POST para `/produtos`
+- GET e POST para `/clientes`
+- Simulação de banco de dados com arrays em memória
 
-📝 A separação de responsabilidades melhora a organização e facilita a escalabilidade do projeto.
-
-
----
-
-## 🚀 Tecnologias Utilizadas
-- **Node.js** — Ambiente de execução JavaScript no servidor.
-- **Express.js** — Framework para criação de rotas HTTP.
-- **Nodemon** — Utilitário para reiniciar o servidor automaticamente em desenvolvimento.
-
----
-
-## 🛠️ Como rodar o projeto
-
- bash
-#Clonar o repositório
-git clone https://github.com/osmarsoto/A3_E1.git
-
-#Navegar até a pasta da API
-cd osmarsoto/A3_E1-REST
-
-#Instalar as dependências
+### ▶ Como Executar
+```bash
 npm install
+node server.js
+```
+Acesse em: [http://localhost:8001](http://localhost:8001)
 
-#Rodar o servidor
-npm run dev
-
-## 📚 Rotas Disponíveis
-Produtos
-
-Método	Rota	Descrição
-GET	/produtos	Listar todos os produtos
-POST	/produtos	Cadastrar um novo produto
-PUT	/produtos/:id	Atualizar produto existente
-DELETE	/produtos/:id	Deletar produto existente
-
-## 📂 Estrutura básica
-/api/produtos.js — Arquivo principal com rotas e manipulação dos dados em memória.
-
-## 💡 Melhorias Futuras
-Implementar camadas separadas de Service e Repository.
-
-Persistência dos dados em banco de dados real (MongoDB ou PostgreSQL).
-
-Adicionar autenticação (JWT) e validação de dados.
-
-Escrever testes automatizados (unitários e de integração).
+---
 
